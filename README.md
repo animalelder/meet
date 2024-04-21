@@ -93,20 +93,12 @@ Developed via Test-driven development, it prioritizes code quality and test cove
 
 - **_Scenario_**: When user hasn’t specified a number, 32 events are shown by default
 
-<<<<<<< HEAD
   - _Given_ I have navigated to the main page
-=======
-  - _Given_ I am on the main page
->>>>>>> 8e2491aae7ae82834209fb4a5e928d7cd9916347
   - _When_ I have not specified a number of events to view
   - _Then_ 32 events should be displayed as the default
 
 - **_Scenario_**: User can change the number of events displayed
-<<<<<<< HEAD
   - _Given_ I have navigated to the main page
-=======
-  - _Given_ I am on the main page
->>>>>>> 8e2491aae7ae82834209fb4a5e928d7cd9916347
   - _When_ I can specify thea number of events to be displayed in the app
   - _Then_ see the desired result on the page
 
