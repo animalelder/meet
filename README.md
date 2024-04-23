@@ -9,6 +9,12 @@ offering offline access to upcoming events in specific cities. Its responsive de
 ensures seamless display across devices, delivering an optimized user experience.
 Developed via Test-driven development, it prioritizes code quality and test coverage for increased app performance.
 
+## About Serverless Function Usage
+
+This app uses serverless functions to handle backend operations without the need for maintaining server infrastructure. For example, when a user requests upcoming events or chooses to filter events by city, the serverless backend can respond to these requests by retrieving and processing any data from the database.
+
+With the use of serverless architecture, the app maintains scalability, and cost-effectiveness--while giving any user seamless access to the event information. Using serverless functions is an efficient option for a modern web app.
+
 ## Run this project locally
 
 - Clone this repository
