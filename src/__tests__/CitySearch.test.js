@@ -70,8 +70,7 @@ test('renders the suggestion text in the textbox upon clicking on the suggestion
   await user.type(cityTextBox, 'Berlin');
 
   // the suggestion's textContent look like this: "Berlin, Germany"
-  const BerlinGermanySuggestion =
-    CitySearchComponent.container.querySelectorAll('.suggestion-list-item')[0];
+  const BerlinGermanySuggestion = screen.getAllByRole('listitem')[0];
 
   await user.click(BerlinGermanySuggestion);
 
