@@ -15,21 +15,15 @@ describe('<Event /> component', () => {
   });
 
   test('renders event title', () => {
-    expect(
-      EventComponent.queryByText(allEvents[0].summary)
-    ).toBeInTheDocument();
+    expect(EventComponent.getByText(allEvents[0].summary)).toBeInTheDocument();
   });
 
   test('renders event start time', () => {
-    expect(
-      EventComponent.queryByText(allEvents[0].created)
-    ).toBeInTheDocument();
+    expect(EventComponent.getByText(allEvents[0].created)).toBeInTheDocument();
   });
 
   test('renders event location', () => {
-    expect(
-      EventComponent.queryByText(allEvents[0].location)
-    ).toBeInTheDocument();
+    expect(EventComponent.getByText(allEvents[0].location)).toBeInTheDocument();
   });
 
   test('event details are hidden by default', () => {
@@ -40,7 +34,7 @@ describe('<Event /> component', () => {
 
   test("renders event details when user clicks 'show details' button", async () => {
     const user = userEvent.setup();
-    const button = EventComponent.queryByRole('button');
+    const button = EventComponent.getByRole('button');
     await user.click(button, 'Show Details');
     const details = EventComponent.container.querySelector('#event-details');
     expect(details).toBeInTheDocument();
@@ -48,7 +42,7 @@ describe('<Event /> component', () => {
 
   test("hides event details when user clicks 'hide details' button", async () => {
     const user = userEvent.setup();
-    const button = EventComponent.queryByRole('button');
+    const button = EventComponent.getByRole('button');
     const details = EventComponent.container.querySelector('#event-details');
     await user.click(button, 'Hide Details');
     expect(details).not.toBeInTheDocument();
