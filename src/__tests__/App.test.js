@@ -20,7 +20,7 @@ describe('<App /> component', () => {
   });
 
   test('render NumberOfEvents', () => {
-    expect(AppDOM.querySelector('#numberOfEvents')).toBeInTheDocument();
+    expect(AppDOM.querySelector('#number-of-events')).toBeInTheDocument();
   });
 });
 
@@ -52,5 +52,20 @@ describe('<App /> integration', () => {
     allRenderedEventItems.forEach((event) => {
       expect(event.textContent).toContain('Berlin, Germany');
     });
+  });
+
+  test('changes the number of events according to user input', async () => {
+    const { container } = render(<App />);
+    const AppDOM = container.firstChild;
+    const NumberOfEventsDOM = AppDOM.querySelector('#number-of-events');
+    const NumberOfEventsInput =
+      within(NumberOfEventsDOM).queryByRole('textbox');
+
+    await userEvent.type(NumberOfEventsInput, '{backspace}{backspace}10');
+
+    const EventListDOM = AppDOM.querySelector('#event-list');
+    const allRenderedEventItems =
+      within(EventListDOM).queryAllByRole('listitem');
+    expect(allRenderedEventItems.length).toEqual(10);
   });
 });
