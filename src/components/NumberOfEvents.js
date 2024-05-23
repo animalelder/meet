@@ -13,7 +13,14 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
 
   return (
     <div id='number-of-events'>
-      <input type='text' value={numberOfEvents} onChange={handleInputChange} />
+      <input
+        type='text'
+        className='number'
+        value={numberOfEvents}
+        onClick={(e) => e.target.select()}
+        onFocus={(e) => e.target.select()}
+        onChange={handleInputChange}
+      />
     </div>
   );
 };
