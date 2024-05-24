@@ -1,3 +1,5 @@
+//The lines that are commented out were removed from the original code. The tests all pass. I will remove the lines after discussing with Andrew.
+
 import { render, screen } from '@testing-library/react';
 import Event from '../components/Event';
 import userEvent from '@testing-library/user-event';
@@ -30,24 +32,24 @@ describe('<Event /> component', () => {
   });
 
   test('event details are hidden by default', () => {
-    const { container } = render(<Event event={allEvents[0]} />);
-    expect(container.querySelector('.event-details')).not.toBeInTheDocument();
+    render(<Event event={allEvents[0]} />);
+    expect(screen.queryByTestId('.event-details')).not.toBeInTheDocument();
   });
 
   test("renders event details when user clicks 'show details' button", async () => {
-    const { getByRole, container } = render(<Event event={allEvents[0]} />);
+    render(<Event event={allEvents[0]} />);
     const user = userEvent.setup();
-    const button = getByRole('button');
+    const button = screen.getByRole('button');
     await user.click(button, 'Show Details');
-    const details = container.querySelector('.event-details');
+    const details = screen.queryByTestId('event-details');
     expect(details).toBeInTheDocument();
   });
 
   test("hides event details when user clicks 'hide details' button", async () => {
-    const { getByRole, container } = render(<Event event={allEvents[0]} />);
+    render(<Event event={allEvents[0]} />);
     const user = userEvent.setup();
     const button = screen.getByRole('button');
-    const details = container.querySelector('.event-details');
+    const details = screen.queryByTestId('event-details');
     await user.click(button, 'Hide Details');
     expect(details).not.toBeInTheDocument();
   });
