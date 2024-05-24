@@ -3,13 +3,6 @@ import NumberOfEvents from '../components/NumberOfEvents';
 import userEvent from '@testing-library/user-event';
 
 describe('<NumberOfEvents /> component', () => {
-  let NumberOfEventsComponent;
-  // beforeEach(() => {
-  //   NumberOfEventsComponent = render(
-  //     <NumberOfEvents setCurrentNOE={() => {}} />
-  //   );
-  // });
-
   test('has an element with "textbox" role', () => {
     render(<NumberOfEvents setCurrentNOE={() => {}} />);
     expect(screen.getByRole('textbox')).toBeInTheDocument();

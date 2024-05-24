@@ -30,7 +30,7 @@ defineFeature(feature, (test) => {
 
     then('the event details are hidden by default', () => {
       const AppDOM = AppComponent.container.firstChild;
-      const eventDetails = AppDOM.querySelector('.details');
+      const eventDetails = AppDOM.querySelector('.event-details');
       expect(eventDetails).not.toBeInTheDocument();
     });
   });
@@ -43,7 +43,7 @@ defineFeature(feature, (test) => {
       allEvents = await getEvents();
       EventComponent = render(<Event event={allEvents[0]} />);
       expect(
-        EventComponent.container.querySelector('.details')
+        EventComponent.container.querySelector('.event-details')
       ).not.toBeInTheDocument();
     });
 
@@ -55,7 +55,7 @@ defineFeature(feature, (test) => {
 
     then('the app should display the details of the event', () => {
       expect(
-        EventComponent.container.querySelector('.details')
+        EventComponent.container.querySelector('.event-details')
       ).toBeInTheDocument();
       expect(screen.queryByText('Hide Details')).toBeInTheDocument();
     });
@@ -71,7 +71,7 @@ defineFeature(feature, (test) => {
       const user = userEvent.setup();
       await user.click(screen.queryByText('Show Details'));
       expect(
-        EventComponent.container.querySelector('.details')
+        EventComponent.container.querySelector('.event-details')
       ).toBeInTheDocument();
     });
 
@@ -83,7 +83,7 @@ defineFeature(feature, (test) => {
 
     then('the app should hide the details of the event', () => {
       expect(
-        EventComponent.container.querySelector('.details')
+        EventComponent.container.querySelector('.event-details')
       ).not.toBeInTheDocument();
       expect(screen.queryByText('Hide Details')).not.toBeInTheDocument();
     });
