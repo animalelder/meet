@@ -1,12 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
 .App {
   text-align: center;
-  padding: 2% 5%;
+  max-width: 799px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
 }
 
 .App * {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+  max-width: 75vw;
+  max-height: 20svh;
+  inset: 0;
+  margin: 1rem auto;
 }
 
 ul {
@@ -18,8 +28,8 @@ p {
   margin: 5px 0;
 }
 
-input[type="text"],
-input[type="number"] {
+input[type='text'],
+input[type='number'] {
   padding: 8px 6px 8px 10px;
   border-radius: 4px;
   outline: none;
@@ -80,10 +90,9 @@ input[type="number"] {
 
 .details-btn {
   position: absolute;
-  right: 5px;
-  bottom: 5px;
-  padding: 5px 8px;
-  border-radius: 4px;
-  outline: none;
+  right: 1rem;
+  bottom: 0.8rem;
+  /* padding: 5px 8px;
+  border-radius: 4px; */
   cursor: pointer;
 }

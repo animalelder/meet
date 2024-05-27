@@ -33,14 +33,14 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
     <div id='city-search'>
       <input
         type='text'
-        className='city'
+        className='city text-primary min-w-96 max-w-lg'
         placeholder='Search for a city'
         value={query}
         onFocus={() => setShowSuggestions(true)}
         onChange={handleInputChanged}
       />
       {showSuggestions ? (
-        <ul className='suggestions'>
+        <ul className='suggestions text-primary'>
           {suggestions.map((suggestion) => {
             return (
               <li

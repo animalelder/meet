@@ -6,6 +6,7 @@ import '@testing-library/jest-dom';
 
 // Here, add portions of the warning messages you want to intentionally prevent from appearing
 const MESSAGES_TO_IGNORE = [
+  'Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`',
   'When testing, code that causes React state updates should be wrapped into act(...):',
   'Error:',
   'The above error occurred',
