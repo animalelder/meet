@@ -1,19 +1,23 @@
 // src/components/Event.js
 import { useState } from 'react';
+import { Button } from './ui/button';
 
 const Event = ({ event }) => {
   const [showDetails, setShowDetails] = useState(false);
   return (
-    <li key={event.id} className='event'>
-      <h2>{event.summary}</h2>
+    <li
+      key={event.id}
+      className='event drop-shadow-lg bg-primary text-primary-foreground'
+    >
+      <h2 className='subpixel-antialiased'>{event.summary}</h2>
       <p>{event.created}</p>
       <p>{event.location}</p>
-      <button
-        className='details-btn'
+      <Button
+        className='details-btn rounded mx-5 ring-2 ring-offset-blue-100 ring-blue-400'
         onClick={() => setShowDetails(!showDetails)}
       >
         {showDetails ? 'Hide Details' : 'Show Details'}
-      </button>
+      </Button>
       {showDetails ? (
         <div
           className='event-details'

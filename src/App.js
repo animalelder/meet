@@ -3,7 +3,9 @@ import EventList from './components/EventList';
 import CitySearch from './components/CitySearch';
 import NumberOfEvents from './components/NumberOfEvents';
 import { extractLocations, getEvents } from './api';
+import './shadcn-style.css';
 import './App.css';
+import Logo from './img/logo.png';
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -26,7 +28,8 @@ function App() {
   }, [currentCity, currentNOE]);
 
   return (
-    <div className='App'>
+    <div className='App bg-secondary text-primary-foreground'>
+      <img src={Logo} alt='Logo' className='logo' />
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
       <NumberOfEvents setCurrentNOE={setCurrentNOE} />
       <EventList events={events} />
