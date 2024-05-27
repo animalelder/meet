@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className='App bg-secondary text-primary-foreground'>
-      <img src={Logo} alt='Logo' className='logo' />
+      <img src={Logo} alt='Logo' className='logo rounded' />
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
       <NumberOfEvents setCurrentNOE={setCurrentNOE} />
       <EventList events={events} />

@@ -13,8 +13,8 @@
 }
 
 .logo {
-  max-width: 75vw;
-  max-height: 20svh;
+  max-height: 75px;
+  object-fit: cover;
   inset: 0;
   margin: 1rem auto;
 }

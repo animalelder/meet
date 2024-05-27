@@ -13,7 +13,8 @@ const Event = ({ event }) => {
       <p>{event.created}</p>
       <p>{event.location}</p>
       <Button
-        className='details-btn bg-secondary text-primary rounded mx-5 ring-2 ring-offset-blue-100 ring-blue-400 hover:bg-secondary/80 hover:text-primary-foreground'
+        variant='secondary'
+        className='details-btn rounded mx-2 ring-2 ring-offset-blue-100 ring-blue-400'
         onClick={() => setShowDetails(!showDetails)}
       >
         {showDetails ? 'Hide Details' : 'Show Details'}
