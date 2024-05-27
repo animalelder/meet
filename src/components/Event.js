@@ -7,9 +7,9 @@ const Event = ({ event }) => {
   return (
     <li
       key={event.id}
-      className='event drop-shadow-lg bg-primary text-primary-foreground'
+      className='event drop-shadow-lg bg-primary border-secondary text-primary-foreground p-4 my-4 mx-2 ring-2 ring-offset-blue-100 ring-blue-900'
     >
-      <h2 className='subpixel-antialiased'>{event.summary}</h2>
+      <h2 className='subpixel-antialiased text-center'>{event.summary}</h2>
       <p>{event.created}</p>
       <p>{event.location}</p>
       <Button

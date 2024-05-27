@@ -27,7 +27,7 @@ function App() {
   }, [currentCity, currentNOE]);
 
   return (
-    <div className='App bg-secondary text-primary-foreground'>
+    <div className='App container bg-secondary text-primary-foreground'>
       <img src={Logo} alt='Logo' className='logo rounded' />
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
       <NumberOfEvents setCurrentNOE={setCurrentNOE} />
