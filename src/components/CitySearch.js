@@ -35,6 +35,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
         type='text'
         className='city text-primary bg-primary-foreground rounded-md p-2 m-2 ring-2 ring-offset-blue-100 ring-blue-900 mx-10'
         placeholder='Search for a city'
+        data-test-id='city-search-input'
         value={query}
         onFocus={() => setShowSuggestions(true)}
         onChange={handleInputChanged}
