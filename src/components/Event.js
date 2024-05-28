@@ -1,6 +1,7 @@
 // src/components/Event.js
 import { useState } from 'react';
 import { Button } from './ui/button';
+import { format } from 'date-fns';
 
 const Event = ({ event }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -9,9 +10,9 @@ const Event = ({ event }) => {
       key={event.id}
       className='event drop-shadow-lg bg-primary border-secondary text-primary-foreground p-4 my-4 mx-2 ring-2 ring-offset-blue-100 ring-blue-900'
     >
-      <h2 className='subpixel-antialiased text-center'>{event.summary}</h2>
-      <p>{event.created}</p>
-      <p>{event.location}</p>
+      <h2 className='left-1/4 subpixel-antialiased text-lg'>{event.summary}</h2>
+      <p className='text-sm'>{format(new Date(event.created), 'Pp')}</p>
+      <p className='text-lg'>{event.location}</p>
       <Button
         variant='secondary'
         className='details-btn rounded mx-2 ring-2 ring-offset-blue-100 ring-blue-400'
@@ -21,11 +22,11 @@ const Event = ({ event }) => {
       </Button>
       {showDetails ? (
         <div
-          className='event-details'
+          className='event-details text-slate-50'
           id='event-details'
           data-testid='event-details'
         >
-          <h3>Event Details</h3>
+          <h3 className='text-yellow-700'>Event Details</h3>
           <p>{event.description}</p>
         </div>
       ) : null}

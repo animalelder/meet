@@ -13,7 +13,7 @@
 }
 
 .logo {
-  max-height: 75px;
+  max-height: 10rem;
   object-fit: cover;
   inset: 0;
   margin: 1rem auto;
@@ -31,6 +31,7 @@ p {
 input[type='text'],
 input[type='number'] {
   padding: 8px 6px 8px 10px;
+  margin: 0.5rem 1.5rem;
   border-radius: 4px;
   outline: none;
   border: 1px solid #ccc;
@@ -81,6 +82,7 @@ input[type='number'] {
 
 .event {
   padding: 10px 10px 35px;
+  min-height: 10rem;
   margin-bottom: 10px;
   text-align: left;
   border: 1px solid #ccc;
@@ -95,4 +97,17 @@ input[type='number'] {
   /* padding: 5px 8px;
   border-radius: 4px; */
   cursor: pointer;
+}
+
+.number {
+  display: inline-flex;
+  max-width: 100px;
+}
+
+.city-search {
+  display: inline-flex;
+  max-width: 400px;
+  flex-direction: row;
+  margin: auto;
+  position: relative;
 }

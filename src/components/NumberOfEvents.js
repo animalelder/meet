@@ -12,16 +12,16 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
   };
 
   return (
-    <div id='number-of-events'>
+    <>
       <input
         type='text'
-        className='number text-primary'
+        className='number mx-5 text-primary bg-primary-foreground rounded-md p-2 m-2 ring-2 ring-offset-blue-100 ring-blue-900'
         value={numberOfEvents}
         onClick={(e) => e.target.select()}
         onFocus={(e) => e.target.select()}
         onChange={handleInputChange}
       />
-    </div>
+    </>
   );
 };
 
