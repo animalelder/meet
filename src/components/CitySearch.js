@@ -1,9 +1,9 @@
 // src/components/CitySearch.js
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const CitySearch = ({ allLocations, setCurrentCity }) => {
   const [showSuggestions, setShowSuggestions] = useState(false);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
   const handleInputChanged = (event) => {
@@ -32,28 +32,28 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
   return (
     <>
       <input
-        type='text'
-        className='city text-primary bg-primary-foreground rounded-md p-2 m-2 ring-2 ring-offset-blue-100 ring-blue-900 mx-10'
-        placeholder='Search for a city'
-        data-test-id='city-search-input'
+        type="text"
+        className="city m-2 mx-10 rounded-md p-2 text-slate-950 ring-2 ring-blue-900 ring-offset-blue-100 placeholder-shown:text-slate-800"
+        placeholder="Search for a city"
+        data-test-id="city-search-input"
         value={query}
         onFocus={() => setShowSuggestions(true)}
         onChange={handleInputChanged}
       />
       {showSuggestions ? (
-        <ul className='suggestions text-primary'>
+        <ul className="suggestions text-primary">
           {suggestions.map((suggestion) => {
             return (
               <li
                 key={suggestion}
                 onClick={handleItemClicked}
-                className='suggestion-list-item'
+                className="suggestion-list-item"
               >
                 {suggestion}
               </li>
             );
           })}
-          <li key='See all cities' onClick={handleItemClicked}>
+          <li key="See all cities" onClick={handleItemClicked}>
             <b>See all cities</b>
           </li>
         </ul>

@@ -1,3 +1,7 @@
+/* eslint-disable testing-library/render-result-naming-convention */
+/* eslint-disable testing-library/no-node-access */
+/* eslint-disable testing-library/prefer-screen-queries */
+/* eslint-disable testing-library/no-render-in-setup */
 // src/__tests__/CitySearch.test.js
 
 import { render, screen, within } from '@testing-library/react';

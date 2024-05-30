@@ -5,7 +5,7 @@ module.exports = {
   // ...
   webpack: {
     alias: {
-      '@': path.resolve(__dirname, 'src/'),
+      "@": path.resolve(__dirname, "src/"),
     },
   },
   jest: {
@@ -23,7 +23,7 @@ module.exports = {
   },
   style: {
     modules: {
-      localIdentName: '',
+      localIdentName: "",
     },
     css: {
       loaderOptions: {
@@ -44,8 +44,12 @@ module.exports = {
       },
     },
     postcss: {
-      mode: 'extends' /* (default value) */ || 'file',
-      plugins: [require('tailwindcss'), require('autoprefixer')],
+      mode: "extends" /* (default value) */ || "file",
+      plugins: [
+        require("postcss-import"),
+        require("tailwindcss"),
+        require("autoprefixer"),
+      ],
       env: {
         autoprefixer: {
           /* ... */
