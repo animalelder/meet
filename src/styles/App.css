@@ -84,6 +84,5 @@ input[type='number'] {
   bottom: 5px;
   padding: 5px 8px;
   border-radius: 4px;
-  outline: none;
   cursor: pointer;
 }

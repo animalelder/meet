@@ -30,7 +30,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
   }, [`${allLocations}`]);
 
   return (
-    <div id='city-search'>
+    <div id='city-search' className='inline-block w-44 placeholder-slate-700'>
       <input
         type='text'
         className='city'

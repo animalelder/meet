@@ -12,6 +12,7 @@
 # production
 /build
 ./src/styles/tailwind.generated.css
+./src/styles/output.css
 
 # package directories
 node_modules
@@ -23,6 +24,7 @@ jspm_packages
 config.json
 
 # misc
+.env
 .DS_Store
 .env.local
 .env.development.local

@@ -3,7 +3,7 @@ import EventList from './components/EventList';
 import CitySearch from './components/CitySearch';
 import NumberOfEvents from './components/NumberOfEvents';
 import { extractLocations, getEvents } from './api';
-// import './App.css';
+import Logo from './img/logo.png';
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -26,7 +26,8 @@ function App() {
   }, [currentCity, currentNOE]);
 
   return (
-    <div className='App scroll-smooth antialiased bg-blue-200'>
+    <div className='App bg-blue-200'>
+      <img src={Logo} alt='Meet App Logo' className='mx-auto logo max-h-40' />
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
       <NumberOfEvents setCurrentNOE={setCurrentNOE} />
       <EventList events={events} />

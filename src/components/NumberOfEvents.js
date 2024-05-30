@@ -12,10 +12,10 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
   };
 
   return (
-    <div id='number-of-events'>
+    <div id='number-of-events' className='inline-flex'>
       <input
         type='text'
-        className='number'
+        className='number w-12'
         value={numberOfEvents}
         onClick={(e) => e.target.select()}
         onFocus={(e) => e.target.select()}
