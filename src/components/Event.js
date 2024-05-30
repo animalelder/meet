@@ -6,8 +6,8 @@ const Event = ({ event }) => {
   return (
     <li key={event.id} className='event bg-slate-50'>
       <h2 className='text-lg'>{event.summary}</h2>
-      <p>{event.created}</p>
-      <p className='text-orange-900'>{event.location}</p>
+      <p className='text-emerald-900'>{event.created}</p>
+      <p className='text-orange-950'>{event.location}</p>
       <button
         className='details-btn'
         onClick={() => setShowDetails(!showDetails)}
