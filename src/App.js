@@ -3,7 +3,7 @@ import EventList from './components/EventList';
 import CitySearch from './components/CitySearch';
 import NumberOfEvents from './components/NumberOfEvents';
 import { extractLocations, getEvents } from './api';
-import './App.css';
+// import './App.css';
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -26,7 +26,7 @@ function App() {
   }, [currentCity, currentNOE]);
 
   return (
-    <div className='App'>
+    <div className='App scroll-smooth antialiased bg-blue-200'>
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
       <NumberOfEvents setCurrentNOE={setCurrentNOE} />
       <EventList events={events} />
