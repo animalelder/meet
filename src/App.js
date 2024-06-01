@@ -26,10 +26,15 @@ function App() {
   }, [currentCity, currentNOE]);
 
   return (
-    <div className='App bg-blue-200'>
+    <div className='bg-blue-200 App'>
       <img src={Logo} alt='Meet App Logo' className='mx-auto logo max-h-40' />
-      <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
-      <NumberOfEvents setCurrentNOE={setCurrentNOE} />
+      <div className='flex flex-row items-start gap-4 py-10 mx-auto my-3 max-w-fit h-28 space-between'>
+        <CitySearch
+          allLocations={allLocations}
+          setCurrentCity={setCurrentCity}
+        />
+        <NumberOfEvents setCurrentNOE={setCurrentNOE} />
+      </div>
       <EventList events={events} />
     </div>
   );

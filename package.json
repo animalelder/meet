@@ -28,14 +28,13 @@
     "workbox-streams": "^6.6.0"
   },
   "scripts": {
-    "start": "react-scripts start && build:styles",
+    "start": "react-scripts start && npm run build:styles",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build:styles": "tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/output.css --watch",
-    "prestart": "npm run build:styles",
     "prebuild": "npm run build:styles"
   },
   "eslintConfig": {
