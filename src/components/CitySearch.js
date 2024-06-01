@@ -27,7 +27,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
 
   useEffect(() => {
     setSuggestions(allLocations);
-  }, [`${allLocations}`]);
+  }, [JSON.stringify(allLocations), allLocations]);
 
   return (
     <div
@@ -40,6 +40,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
         placeholder='Search for a city'
         value={query}
         onFocus={() => setShowSuggestions(true)}
+        onBlur={() => setShowSuggestions(false)}
         onChange={handleInputChanged}
       />
       {showSuggestions ? (
