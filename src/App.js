@@ -28,7 +28,7 @@ function App() {
   return (
     <div className='subpixel-antialiased bg-blue-200 App scroll-smooth'>
       <img src={Logo} alt='Meet App Logo' className='mx-auto logo max-h-40' />
-      <div className='flex flex-row items-start gap-4 py-10 mx-auto my-3 bg-blue-400 border-2 bg-opacity-60 border-opacity-85 border-y-emerald-700 border-x-emerald-800 rounded-2xl px-7 max-w-fit h-28 space-between bg-blend-color-dodge'>
+      <div className='flex flex-row items-start max-w-lg gap-4 py-10 mx-auto my-3 bg-blue-400 border-2 drop-shadow-md bg-opacity-60 border-opacity-85 border-y-emerald-700 border-x-emerald-800 rounded-2xl px-7 max-w-fit h-28 space-between bg-blend-color-dodge'>
         <CitySearch
           allLocations={allLocations}
           setCurrentCity={setCurrentCity}

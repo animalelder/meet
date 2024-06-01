@@ -42,7 +42,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
       </label>
       <input
         type='text'
-        className='relative flex-shrink h-10 mb-0 text-center rounded-lg min-w-52 max-w-64 rounded-b-md placeholder-neutral-400 city'
+        className='relative flex-shrink h-10 mb-0 text-center rounded-lg min-w-52 max-w-64 drop-shadow rounded-b-md placeholder-neutral-400 city'
         placeholder='Search for a city'
         name='city-selector'
         value={query}

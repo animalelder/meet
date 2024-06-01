@@ -24,7 +24,7 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
       </label>
       <input
         type='text'
-        className='relative flex-shrink h-10 text-center rounded-lg number'
+        className='relative flex-shrink h-10 text-center rounded-lg number drop-shadow'
         value={numberOfEvents}
         name='number-of-events'
         onClick={(e) => e.target.select()}
