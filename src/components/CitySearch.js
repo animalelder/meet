@@ -36,13 +36,13 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
     >
       <label
         htmlFor='city-selector'
-        className='absolute z-auto uppercase place-self-center -top-7 text-neutral-950/80'
+        className='absolute z-auto font-mono uppercase place-self-center -top-7 text-neutral-950/80'
       >
         SEARCH
       </label>
       <input
         type='text'
-        className='flex-shrink h-10 mb-2 text-center rounded-lg shadow-md min-w-52 max-w-64 shadow-neutral-900/35 rounded-b-md placeholder-neutral-600 city'
+        className='flex-shrink h-10 mb-2 font-medium text-center rounded-lg shadow-md min-w-52 max-w-64 shadow-neutral-900/35 rounded-b-md placeholder-neutral-600 city'
         placeholder='Search for a city'
         name='city-selector'
         value={query}
