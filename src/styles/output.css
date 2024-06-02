@@ -926,6 +926,14 @@ input[type='number'] {
   margin-top: 2rem;
 }
 
+.mb-4{
+  margin-bottom: 1rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -1048,6 +1056,14 @@ input[type='number'] {
 
 .w-full{
   width: 100%;
+}
+
+.w-11\/12{
+  width: 91.666667%;
+}
+
+.w-11{
+  width: 2.75rem;
 }
 
 .min-w-10{
@@ -1521,12 +1537,44 @@ input[type='number'] {
   padding-top: 0.75rem;
 }
 
+.pb-5{
+  padding-bottom: 1.25rem;
+}
+
 .text-left{
   text-align: left;
 }
 
 .text-center{
   text-align: center;
+}
+
+.indent-1{
+  text-indent: 0.25rem;
+}
+
+.indent-3{
+  text-indent: 0.75rem;
+}
+
+.indent-2{
+  text-indent: 0.5rem;
+}
+
+.indent-0{
+  text-indent: 0px;
+}
+
+.indent-0\.5{
+  text-indent: 0.125rem;
+}
+
+.indent-1\.5{
+  text-indent: 0.375rem;
+}
+
+.indent-5{
+  text-indent: 1.25rem;
 }
 
 .text-lg{
@@ -1654,6 +1702,10 @@ input[type='number'] {
 
 .underline{
   text-decoration-line: underline;
+}
+
+.decoration-lime-300{
+  text-decoration-color: #bef264;
 }
 
 .antialiased{

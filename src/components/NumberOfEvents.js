@@ -18,7 +18,7 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
     >
       <label
         htmlFor='number-of-events'
-        className='absolute uppercase place-self-center -top-7 text-neutral-950/80'
+        className='absolute uppercase indent-3 place-self-center -top-7 text-neutral-950/80'
       >
         # of Events
       </label>
