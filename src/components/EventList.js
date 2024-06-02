@@ -5,7 +5,7 @@ const EventList = ({ events }) => {
   return (
     <ul
       id='event-list'
-      className='max-w-2xl p-0 mx-auto list-none'
+      className='z-auto max-w-2xl p-0 mx-auto'
       title='event-list'
       data-testid='event-list'
     >

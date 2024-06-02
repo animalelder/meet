@@ -51,9 +51,9 @@ input[type='number'] {
   margin: 0;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
-} */
+}
 
-/* .suggestions > li {
+.suggestions > li {
   text-align: left;
   padding: 8px 6px 8px 10px;
   background-color: #eee;
@@ -69,20 +69,20 @@ input[type='number'] {
   background-color: #bcdcdb;
 } */
 
-.event {
+/* .event {
   padding: 10px 10px 35px;
   margin-bottom: 10px;
   text-align: left;
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
-}
+} */
 
-.details-btn {
+/* .details-btn {
   position: absolute;
   right: 5px;
   bottom: 5px;
   padding: 5px 8px;
   border-radius: 4px;
   cursor: pointer;
-}
+} */

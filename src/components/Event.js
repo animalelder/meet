@@ -6,13 +6,13 @@ const Event = ({ event }) => {
   return (
     <li
       key={event.id}
-      className='relative px-3 py-2 pb-3 mx-2 my-2 border-2 border-opacity-75 rounded-md event drop-shadow-md hover:bg-slate-100 bg-slate-50 border-x-blue-800 border-y-blue-600'
+      className='relative px-3 py-5 mb-3 antialiased border-2 border-opacity-75 rounded-md min-h-fit event drop-shadow-md hover:bg-slate-100 bg-slate-50 border-x-blue-800 border-y-blue-600'
     >
-      <h2 className='text-xl text-orange-400'>{event.summary}</h2>
-      <p className='text-emerald-900'>{event.created}</p>
-      <p className='text-emerald-800'>{event.location}</p>
+      <h2 className='text-lg text-orange-700'>{event.summary}</h2>
+      <p className='text-sm text-emerald-900'>{event.created}</p>
+      <p className='text-orange-700'>{event.location}</p>
       <button
-        className='absolute rounded-md details-btn bg-emerald-600 drop-shadow-sm text-slate-50 hover:bg-emerald-400 hover:text-slate-700'
+        className='absolute px-2 py-1 rounded-md shadow-md cursor-pointer shadow-cyan-500/50 right-1 bottom-1 details-btn bg-gradient-to-r from-emerald-400 to-emerald-600 text-slate-50 hover:from-emerald-400 hover:to-teal-600 hover:text-slate-700'
         onClick={() => setShowDetails(!showDetails)}
       >
         {showDetails ? 'Less' : 'More'}
@@ -23,8 +23,10 @@ const Event = ({ event }) => {
           id='event-details'
           data-testid='event-details'
         >
-          <h3>Event Details</h3>
-          <p className='block text-slate-800'>{event.description}</p>
+          <h3 className='text-emerald-900'>Event Details</h3>
+          <p className='block text-sm clear-left text-green-950'>
+            {event.description}
+          </p>
         </div>
       ) : null}
     </li>

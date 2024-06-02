@@ -32,17 +32,17 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
   return (
     <div
       id='city-search'
-      className='relative m-auto appearance-none justify-self-auto'
+      className='relative flex flex-col m-auto min-h-fit justify-self-auto'
     >
       <label
         htmlFor='city-selector'
-        className='absolute z-50 uppercase opacity-75 -top-7 left-1/3 text-neutral-100'
+        className='absolute z-auto uppercase place-self-center -top-7 text-neutral-950/80'
       >
-        CITIES
+        SEARCH
       </label>
       <input
         type='text'
-        className='relative flex-shrink h-10 mb-0 text-center rounded-lg min-w-52 max-w-64 drop-shadow rounded-b-md placeholder-neutral-400 city'
+        className='flex-shrink h-10 mb-2 text-center rounded-lg shadow-md min-w-52 max-w-64 shadow-neutral-900/35 rounded-b-md placeholder-neutral-600 city'
         placeholder='Search for a city'
         name='city-selector'
         value={query}
@@ -50,20 +50,20 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
         onChange={handleInputChanged}
       />
       {showSuggestions ? (
-        <ul className='absolute z-50 self-center m-0 overflow-y-visible text-sm shadow-2xl last:rounded-b-md min-w-36 max-w-48 suggestions shadow-zinc-900 '>
+        <ul className='self-end block w-full mt-2 mb-6 text-sm border-2 border-blue-400 rounded-lg ring-2 ring-blue-500 m-h-fit suggestions'>
           {suggestions.map((suggestion) => {
             return (
               <li
                 key={suggestion}
                 onClick={handleItemClicked}
-                className='z-50 suggestion-list-item min-w-36 max-w-48 text-left p-2 bg-neutral-50 hover:bg-[#bcdcdb] cursor-pointer'
+                className='p-2 text-center rounded-sm cursor-pointer suggestion-list-item first:pt-0 bg-neutral-50 hover:z-50 hover:bg-green-300'
               >
                 {suggestion}
               </li>
             );
           })}
           <li
-            className='z-50 suggestion-list-item text-lef min-w-36 max-w-48 p-3 mb-2 bg-neutral-100 hover:bg-[#bcdcdb] cursor-pointer'
+            className='w-full p-3 text-center cursor-pointer suggestion-list-item bg-neutral-100 hover:bg-green-300'
             key='See all cities'
             onClick={handleItemClicked}
           >
