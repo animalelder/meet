@@ -28,7 +28,7 @@ function App() {
   return (
     <div className='box-border bg-blue-200 App'>
       <img src={Logo} alt='Meet App Logo' className='mx-auto logo max-h-40' />
-      <div className='flex flex-row flex-wrap items-start max-w-lg py-10 mx-auto mt-8 gap-x-4 gap-y-6 min-w-fit rounded-2xl px-7'>
+      <div className='flex flex-row flex-wrap items-center max-w-lg gap-4 py-10 mx-auto mt-8 min-w-fit rounded-2xl px-7'>
         <CitySearch
           allLocations={allLocations}
           setCurrentCity={setCurrentCity}

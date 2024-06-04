@@ -42,7 +42,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
       </label>
       <input
         type='text'
-        className='flex-shrink h-10 mb-2 font-medium text-center rounded-lg shadow-md min-w-52 max-w-64 shadow-neutral-900/35 rounded-b-md placeholder-neutral-600 city'
+        className='flex-shrink h-10 font-medium text-center rounded-lg drop-shadow-md min-w-52 max-w-64 shadow-neutral-900/35 rounded-b-md placeholder-neutral-600 city'
         placeholder='Search for a city'
         name='city-selector'
         value={query}
@@ -63,7 +63,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
             );
           })}
           <li
-            className='w-full p-3 text-center cursor-pointer suggestion-list-item bg-neutral-100 hover:bg-green-300'
+            className='w-full p-3 font-mono text-center cursor-pointer suggestion-list-item bg-neutral-100 hover:bg-green-300'
             key='See all cities'
             onClick={handleItemClicked}
           >

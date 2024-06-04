@@ -14,17 +14,17 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
   return (
     <div
       id='number-of-events'
-      className='relative object-none object-top shrink min-w-fit max-w-28'
+      className='relative self-start flex-1 object-none object-top min-w-10 max-w-16 xs:min-w-24 xs:max-w-28'
     >
       <label
         htmlFor='number-of-events'
-        className='absolute font-mono uppercase indent-3 place-self-center -top-7 text-neutral-950/80'
+        className='absolute font-mono uppercase xs:overflow-auto indent-3 place-self-center -top-7 text-neutral-950/80'
       >
-        # of Events
+        # of...
       </label>
       <input
         type='text'
-        className='relative h-10 font-medium text-center rounded-lg shadow-md shrink min-w-10 number shadow-neutral-900/35'
+        className='relative h-10 font-medium text-center rounded-lg drop-shadow-md xs:grow max-w-16 xs:min-w-24 number shadow-neutral-900/35'
         value={numberOfEvents}
         name='number-of-events'
         onClick={(e) => e.target.select()}
