@@ -1,5 +1,6 @@
 // src/components/Event.js
 import { useState } from 'react';
+import { format } from 'date-fns';
 
 const Event = ({ event }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -12,7 +13,7 @@ const Event = ({ event }) => {
         {event.summary}
       </h2>
       <p className='text-sm drop-shadow-sm indent-1.5 text-green-950'>
-        at {event.created}
+        {format(new Date(event.created), 'Pp')}
       </p>
       <p className='text-orange-700 drop-shadow-md indent-0.5'>
         in {event.location}

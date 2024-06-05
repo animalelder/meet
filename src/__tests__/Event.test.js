@@ -1,5 +1,5 @@
 //The lines that are commented out were removed from the original code. The tests all pass. I will remove the lines after discussing with Andrew.
-
+import { format } from 'date-fns';
 import { render, screen } from '@testing-library/react';
 import Event from '../components/Event';
 import userEvent from '@testing-library/user-event';
@@ -23,7 +23,9 @@ describe('<Event /> component', () => {
 
   test('renders event start time', () => {
     render(<Event event={allEvents[0]} />);
-    expect(screen.getByText(allEvents[0].created)).toBeInTheDocument();
+    expect(
+      screen.getByText(format(new Date(allEvents[0].created), 'Pp'))
+    ).toBeInTheDocument();
   });
 
   test('renders event location', () => {
