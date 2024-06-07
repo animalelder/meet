@@ -48,7 +48,7 @@ defineFeature(feature, (test) => {
     });
 
     when('the user clicks on the event to show details', async () => {
-      const showDetails = screen.queryByText('Show Details');
+      const showDetails = screen.queryByText('Details');
       const user = userEvent.setup();
       await user.click(showDetails);
     });
@@ -57,7 +57,7 @@ defineFeature(feature, (test) => {
       expect(
         EventComponent.container.querySelector('.event-details')
       ).toBeInTheDocument();
-      expect(screen.queryByText('Hide Details')).toBeInTheDocument();
+      expect(screen.queryByText('Hide')).toBeInTheDocument();
     });
   });
 
@@ -69,14 +69,14 @@ defineFeature(feature, (test) => {
       allEvents = await getEvents();
       EventComponent = render(<Event event={allEvents[0]} />);
       const user = userEvent.setup();
-      await user.click(screen.queryByText('Show Details'));
+      await user.click(screen.queryByText('Details'));
       expect(
         EventComponent.container.querySelector('.event-details')
       ).toBeInTheDocument();
     });
 
     when('the user clicks on the event to hide details again', async () => {
-      const hideDetails = screen.queryByText('Hide Details');
+      const hideDetails = screen.queryByText('Hide');
       const user = userEvent.setup();
       await user.click(hideDetails);
     });

@@ -1,7 +1,7 @@
 // src/components/CitySearch.js
 import { useState, useEffect } from 'react';
 
-const CitySearch = ({ allLocations, setCurrentCity }) => {
+const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -16,6 +16,15 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
 
     setQuery(value);
     setSuggestions(filteredLocations);
+
+    let infoText;
+    if (filteredLocations.length === 0) {
+      infoText =
+        'We can not find the city you are looking for. Please try another city';
+    } else {
+      infoText = '';
+    }
+    setInfoAlert(infoText);
   };
 
   const handleItemClicked = (event) => {
@@ -23,6 +32,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
     setQuery(value);
     setShowSuggestions(false); // to hide the list
     setCurrentCity(value);
+    setInfoAlert('');
   };
 
   useEffect(() => {
@@ -44,6 +54,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
         type='text'
         className='flex-shrink h-10 font-medium text-center rounded-lg drop-shadow-md min-w-52 max-w-64 shadow-neutral-900/35 rounded-b-md placeholder-neutral-600 city'
         placeholder='Search for a city'
+        data-testid='city-selector'
         name='city-selector'
         value={query}
         onFocus={() => setShowSuggestions(true)}
@@ -57,6 +68,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
                 key={suggestion}
                 onClick={handleItemClicked}
                 className='p-2 text-center rounded-sm cursor-pointer suggestion-list-item first:pt-0 bg-neutral-50 hover:z-50 hover:bg-green-300'
+                data-testid='suggestion-list-item'
               >
                 {suggestion}
               </li>
@@ -65,9 +77,10 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
           <li
             className='w-full p-3 font-mono text-center cursor-pointer suggestion-list-item bg-neutral-100 hover:bg-green-300'
             key='See all cities'
+            data-testid='suggestion-list-item'
             onClick={handleItemClicked}
           >
-            <span>See all cities</span>
+            See all cities
           </li>
         </ul>
       ) : null}

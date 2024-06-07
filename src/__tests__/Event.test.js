@@ -30,19 +30,19 @@ describe('<Event /> component', () => {
 
   test('renders event location', () => {
     render(<Event event={allEvents[0]} />);
-    expect(screen.getByText(allEvents[0].location)).toBeInTheDocument();
+    expect(screen.getByText(`in ${allEvents[0].location}`)).toBeInTheDocument();
   });
 
   test('event details are hidden by default', () => {
     render(<Event event={allEvents[0]} />);
-    expect(screen.queryByTestId('.event-details')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('event-details')).not.toBeInTheDocument();
   });
 
   test("renders event details when user clicks 'show details' button", async () => {
     render(<Event event={allEvents[0]} />);
     const user = userEvent.setup();
     const button = screen.getByRole('button');
-    await user.click(button, 'Show Details');
+    await user.click(button, 'Details');
     const details = screen.queryByTestId('event-details');
     expect(details).toBeInTheDocument();
   });
@@ -52,7 +52,7 @@ describe('<Event /> component', () => {
     const user = userEvent.setup();
     const button = screen.getByRole('button');
     const details = screen.queryByTestId('event-details');
-    await user.click(button, 'Hide Details');
+    await user.click(button, 'Hide');
     expect(details).not.toBeInTheDocument();
   });
 });
