@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import EventList from './components/EventList';
 import CitySearch from './components/CitySearch';
 import NumberOfEvents from './components/NumberOfEvents';
-import { InfoAlert, ErrorAlert } from './components/Alert';
+import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
 import { extractLocations, getEvents } from './api';
 import Logo from './img/logo-trans.png';
 
@@ -13,6 +13,7 @@ function App() {
   const [currentCity, setCurrentCity] = useState('See all cities');
   const [infoAlert, setInfoAlert] = useState('');
   const [errorAlert, setErrorAlert] = useState('');
+  const [warningAlert, setWarningAlert] = useState('');
 
   const fetchData = async () => {
     const allEvents = await getEvents();
@@ -25,15 +26,23 @@ function App() {
   };
 
   useEffect(() => {
+    if (navigator.onLine) {
+      setWarningAlert('');
+    } else {
+      setWarningAlert(
+        'You are offline. The displayed list may not be up to date.'
+      );
+    }
     fetchData();
   }, [currentCity, currentNOE]);
 
   return (
-    <div className='px-3 App bg-blend-luminosity'>
+    <div className='relative px-3 App'>
       <img src={Logo} alt='Meet App Logo' className='mx-auto logo max-h-40' />
-      <div className='alerts-container fixed drop-shadow-lg font-semibold left-5 max-w-40 min-w-min z-[1000]'>
+      <div className='alerts-container fixed drop-shadow-lg font-semibold top-3 left-5 max-w-40 min-w-min z-[1000]'>
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
         {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
+        {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
       </div>
       <div className='relative flex flex-row flex-wrap items-center max-w-lg gap-4 py-10 mx-auto mt-8 min-w-fit rounded-2xl px-7'>
         <CitySearch
