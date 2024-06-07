@@ -4,7 +4,7 @@ import CitySearch from './components/CitySearch';
 import NumberOfEvents from './components/NumberOfEvents';
 import { InfoAlert, ErrorAlert } from './components/Alert';
 import { extractLocations, getEvents } from './api';
-import Logo from './img/logo.png';
+import Logo from './img/logo-trans.png';
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -29,13 +29,13 @@ function App() {
   }, [currentCity, currentNOE]);
 
   return (
-    <div className='box-border bg-blue-200 App'>
+    <div className='px-3 App bg-blend-luminosity'>
       <img src={Logo} alt='Meet App Logo' className='mx-auto logo max-h-40' />
-      <div className='alerts-container fixed top-20 drop-shadow-lg font-semibold left-5 max-w-40 min-w-min z-[1000]'>
+      <div className='alerts-container fixed drop-shadow-lg font-semibold left-5 max-w-40 min-w-min z-[1000]'>
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
         {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
       </div>
-      <div className='flex flex-row flex-wrap items-center max-w-lg gap-4 py-10 mx-auto mt-8 min-w-fit rounded-2xl px-7'>
+      <div className='relative flex flex-row flex-wrap items-center max-w-lg gap-4 py-10 mx-auto mt-8 min-w-fit rounded-2xl px-7'>
         <CitySearch
           allLocations={allLocations}
           setCurrentCity={setCurrentCity}

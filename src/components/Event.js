@@ -7,7 +7,7 @@ const Event = ({ event }) => {
   return (
     <li
       key={event.id}
-      className='relative px-3 py-5 mb-3 subpixel-antialiased border-2 border-opacity-75 rounded-md min-h-fit event drop-shadow-md hover:bg-slate-100 bg-slate-50 border-x-blue-800 border-y-blue-600'
+      className='relative px-3 py-5 mb-3 subpixel-antialiased rounded-md shadow-md min-h-fit event shadow-blue-400 hover:bg-slate-100 bg-slate-50 ring-2 ring-blue-800/75'
     >
       <h2 className='text-lg text-orange-700 drop-shadow-md'>
         {event.summary}
@@ -31,7 +31,7 @@ const Event = ({ event }) => {
           data-testid='event-details'
         >
           <h3 className='text-emerald-900 drop-shadow-sm'>Event Details</h3>
-          <p className='block w-11/12 mb-5 text-sm indent-3 text-green-950'>
+          <p className='block w-11/12 mb-5 text-sm indent-3 text-blue-950'>
             {event.description}
           </p>
         </div>

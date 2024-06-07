@@ -52,7 +52,7 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
       </label>
       <input
         type='text'
-        className='flex-shrink h-10 font-medium text-center rounded-lg drop-shadow-md min-w-52 max-w-64 shadow-neutral-900/35 rounded-b-md placeholder-neutral-600 city'
+        className='relative flex-shrink h-10 font-medium text-center rounded-lg drop-shadow-md min-w-52 max-w-64 shadow-neutral-900/35 rounded-b-md placeholder-neutral-600 city'
         placeholder='Search for a city'
         data-testid='city-selector'
         name='city-selector'
@@ -61,7 +61,7 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
         onChange={handleInputChanged}
       />
       {showSuggestions ? (
-        <ul className='self-end block w-full mt-2 mb-6 text-sm border-2 border-blue-400 rounded-lg ring-2 ring-blue-500 m-h-fit suggestions'>
+        <ul className='absolute z-[1000] top-10 self-end block w-full mt-2 mb-6 text-sm border-2 border-blue-400 rounded-lg ring-2 ring-blue-500 m-h-fit suggestions'>
           {suggestions.map((suggestion) => {
             return (
               <li
