@@ -45,7 +45,7 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
       className='relative flex flex-col m-auto min-h-fit justify-self-auto'
     >
       <label
-        htmlFor='city-selector'
+        htmlFor='city-selector-input'
         className='absolute z-auto font-mono uppercase place-self-center -top-7 text-neutral-950/80'
       >
         SEARCH
@@ -55,7 +55,7 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
         className='relative flex-shrink h-10 font-medium text-center rounded-lg drop-shadow-md min-w-52 max-w-64 shadow-neutral-900/35 rounded-b-md placeholder-neutral-600 city'
         placeholder='Search for a city'
         data-testid='city-selector'
-        name='city-selector'
+        name='city-selecto-input'
         value={query}
         onFocus={() => setShowSuggestions(true)}
         onChange={handleInputChanged}

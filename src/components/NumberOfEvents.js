@@ -25,7 +25,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
       className='relative self-start flex-1 object-none object-top min-w-10 max-w-16 xs:min-w-24 xs:max-w-28'
     >
       <label
-        htmlFor='number-of-events'
+        htmlFor='number-of-events-input'
         className='absolute font-mono uppercase xs:overflow-auto indent-3 place-self-center -top-7 text-neutral-950/80'
       >
         # of...
@@ -34,7 +34,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
         type='text'
         className='relative h-10 font-medium text-center rounded-lg drop-shadow-md xs:grow max-w-16 xs:min-w-24 number shadow-neutral-900/35'
         value={numberOfEvents}
-        name='number-of-events'
+        name='number-of-events-input'
         onClick={(e) => e.target.select()}
         onFocus={(e) => e.target.select()}
         onChange={handleInputChange}
