@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import EventList from './components/EventList';
 import CitySearch from './components/CitySearch';
 import NumberOfEvents from './components/NumberOfEvents';
+import CityEventsChart from './components/CityEventsChart';
+import EventGenresChart from './components/EventGenresChart';
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
 import { extractLocations, getEvents } from './api';
 import Logo from './img/logo-trans.png';
@@ -54,6 +56,10 @@ function App() {
           setCurrentNOE={setCurrentNOE}
           setErrorAlert={setErrorAlert}
         />
+      </div>
+      <div className='grid max-w-4xl grid-cols-1 gap-4 mx-auto my-5 mb-5 rounded-sm ring-2 ring-blue-500 md:grid-cols-2 charts-container bg-neutral-50 backdrop-filter'>
+        <EventGenresChart events={events} />
+        <CityEventsChart allLocations={allLocations} events={events} />
       </div>
       <EventList events={events} />
     </div>
