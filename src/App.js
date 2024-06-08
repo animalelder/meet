@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import EventList from './components/EventList';
+import Logo from './img/logo-trans.png';
 import CitySearch from './components/CitySearch';
 import NumberOfEvents from './components/NumberOfEvents';
 import CityEventsChart from './components/CityEventsChart';
 import EventGenresChart from './components/EventGenresChart';
+import EventList from './components/EventList';
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
 import { extractLocations, getEvents } from './api';
-import Logo from './img/logo-trans.png';
 
 function App() {
   const [events, setEvents] = useState([]);
@@ -46,7 +46,7 @@ function App() {
         {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
         {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
       </div>
-      <div className='relative flex flex-row flex-wrap items-center max-w-lg gap-4 py-10 mx-auto mt-8 min-w-fit rounded-2xl px-7'>
+      <div className='relative flex flex-row flex-wrap items-center max-w-lg py-10 mx-auto mt-8 gap-7 min-w-fit rounded-2xl px-7'>
         <CitySearch
           allLocations={allLocations}
           setCurrentCity={setCurrentCity}
@@ -57,7 +57,7 @@ function App() {
           setErrorAlert={setErrorAlert}
         />
       </div>
-      <div className='grid max-w-4xl grid-cols-1 gap-4 mx-auto my-5 mb-5 rounded-sm ring-2 ring-blue-500 md:grid-cols-2 charts-container bg-neutral-50 backdrop-filter'>
+      <div className='grid max-w-4xl grid-cols-1 gap-4 py-2 mx-auto my-5 mb-5 rounded-lg shadow-md min-h-fit shadow-blue-400/50 ring-2 ring-inset ring-blue-500/75 md:grid-cols-2 charts-container bg-neutral-50 backdrop-filter'>
         <EventGenresChart events={events} />
         <CityEventsChart allLocations={allLocations} events={events} />
       </div>

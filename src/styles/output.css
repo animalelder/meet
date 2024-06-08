@@ -1067,6 +1067,10 @@ input[type='number'] {
   height: 14rem;
 }
 
+.h-3{
+  height: 0.75rem;
+}
+
 .max-h-40{
   max-height: 10rem;
 }
@@ -1323,6 +1327,18 @@ input[type='number'] {
   gap: 1.5rem;
 }
 
+.gap-10{
+  gap: 2.5rem;
+}
+
+.gap-7{
+  gap: 1.75rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
+}
+
 .gap-x-4{
   column-gap: 1rem;
 }
@@ -1429,6 +1445,14 @@ input[type='number'] {
   border-radius: 0.125rem;
 }
 
+.rounded{
+  border-radius: 0.25rem;
+}
+
+.rounded-none{
+  border-radius: 0px;
+}
+
 .rounded-b-md{
   border-bottom-right-radius: 0.375rem;
   border-bottom-left-radius: 0.375rem;
@@ -1437,6 +1461,16 @@ input[type='number'] {
 .rounded-b-none{
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
+}
+
+.rounded-t-md{
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
+.rounded-t-none{
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
 
 .border{
@@ -1484,6 +1518,10 @@ input[type='number'] {
 .border-neutral-200{
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
+}
+
+.border-blue-400\/50{
+  border-color: rgb(96 165 250 / 0.5);
 }
 
 .border-x-blue-800{
@@ -2065,6 +2103,11 @@ input[type='number'] {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.shadow-blue-400\/50{
+  --tw-shadow-color: rgb(96 165 250 / 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .outline{
   outline-style: solid;
 }
@@ -2087,6 +2130,10 @@ input[type='number'] {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
+.ring-inset{
+  --tw-ring-inset: inset;
+}
+
 .ring-blue-500{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
@@ -2104,6 +2151,14 @@ input[type='number'] {
 .ring-neutral-200{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(229 229 229 / var(--tw-ring-opacity));
+}
+
+.ring-blue-500\/90{
+  --tw-ring-color: rgb(59 130 246 / 0.9);
+}
+
+.ring-blue-500\/75{
+  --tw-ring-color: rgb(59 130 246 / 0.75);
 }
 
 .blur{
@@ -2152,8 +2207,34 @@ input[type='number'] {
 
 /* @import "./custom-utilities.css"; */
 
+.first\:mt-2:first-child{
+  margin-top: 0.5rem;
+}
+
+.first\:h-5:first-child{
+  height: 1.25rem;
+}
+
+.first\:h-6:first-child{
+  height: 1.5rem;
+}
+
+.first\:rounded-b-none:first-child{
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.first\:rounded-t-md:first-child{
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
 .first\:pt-0:first-child{
   padding-top: 0px;
+}
+
+.first\:pt-2:first-child{
+  padding-top: 0.5rem;
 }
 
 .hover\:z-50:hover{
@@ -2186,6 +2267,10 @@ input[type='number'] {
 }
 
 @media (min-width: 400px){
+  .xs\:block{
+    display: block;
+  }
+
   .xs\:min-w-24{
     min-width: 6rem;
   }
@@ -2198,8 +2283,18 @@ input[type='number'] {
     flex-grow: 1;
   }
 
+  .xs\:gap-4{
+    gap: 1rem;
+  }
+
   .xs\:overflow-auto{
     overflow: auto;
+  }
+}
+
+@media (min-width: 640px){
+  .sm\:block{
+    display: block;
   }
 }
 

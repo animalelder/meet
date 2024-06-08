@@ -26,7 +26,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
     >
       <label
         htmlFor='number-of-events-input'
-        className='absolute font-mono uppercase xs:overflow-auto indent-3 place-self-center -top-7 text-neutral-950/80'
+        className='absolute hidden font-mono uppercase xs:block indent-3 place-self-center -top-7 text-neutral-950/80'
       >
         # of...
       </label>

@@ -7,7 +7,7 @@ const Event = ({ event }) => {
   return (
     <li
       key={event.id}
-      className='relative px-3 py-5 mb-3 subpixel-antialiased rounded-md shadow-md min-h-fit event shadow-blue-400 hover:bg-slate-100 bg-slate-50 ring-2 ring-blue-800/75'
+      className='relative px-3 py-5 my-3 mb-3 subpixel-antialiased rounded-md shadow-md first:mt-2 min-h-fit event shadow-blue-400 hover:bg-slate-100 bg-slate-50 ring-2 ring-blue-800/75'
     >
       <h2 className='text-lg text-orange-700 drop-shadow-md'>
         {event.summary}

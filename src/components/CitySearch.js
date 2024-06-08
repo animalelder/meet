@@ -61,13 +61,13 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
         onChange={handleInputChanged}
       />
       {showSuggestions ? (
-        <ul className='absolute z-[1000] top-10 self-end block w-full mt-2 mb-6 text-sm border-2 border-blue-400 rounded-lg ring-2 ring-blue-500 m-h-fit suggestions'>
+        <ul className='absolute z-[1000] top-10 self-end block w-full mt-2 mb-6 text-sm border-2 border-blue-400/50 rounded-md ring-2 ring-blue-500 m-h-fit suggestions'>
           {suggestions.map((suggestion) => {
             return (
               <li
                 key={suggestion}
                 onClick={handleItemClicked}
-                className='p-2 text-center rounded-sm cursor-pointer suggestion-list-item first:pt-0 bg-neutral-50 hover:z-50 hover:bg-green-300'
+                className='p-2 text-center rounded-none cursor-pointer first:h-6 min-h-fit first:rounded-b-none first:rounded-t-md suggestion-list-item first:pt-2 bg-neutral-50 hover:z-50 hover:bg-green-300'
                 data-testid='suggestion-list-item'
               >
                 {suggestion}
@@ -75,7 +75,7 @@ const CitySearch = ({ allLocations, setCurrentCity, setInfoAlert }) => {
             );
           })}
           <li
-            className='w-full p-3 font-mono text-center cursor-pointer suggestion-list-item bg-neutral-100 hover:bg-green-300'
+            className='w-full p-3 font-mono text-center rounded-t-none cursor-pointer rounded-b-md suggestion-list-item bg-neutral-100 hover:bg-green-300'
             key='See all cities'
             data-testid='suggestion-list-item'
             onClick={handleItemClicked}
