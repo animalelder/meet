@@ -1,4 +1,4 @@
-# The Meet App
+# meetJS: a Progressive Web App
 
 Test-driven Development app utilizing the Google Calendar API and serverless functions
 
