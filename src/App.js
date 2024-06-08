@@ -39,7 +39,7 @@ function App() {
   }, [currentCity, currentNOE]);
 
   return (
-    <div className='relative px-3 App'>
+    <div className='relative px-3 bg-gradient-to-b from-blue-100/75 via-blue-500/75 to-blue-200 App'>
       <img src={Logo} alt='Meet App Logo' className='mx-auto logo max-h-40' />
       <div className='alerts-container fixed drop-shadow-lg font-semibold top-3 left-5 max-w-40 min-w-min z-[1000]'>
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
