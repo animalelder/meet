@@ -1,6 +1,6 @@
-# meetJS: a Progressive Web App
+# meetJS
 
-Test-driven Development app utilizing the Google Calendar API and serverless functions
+A progressive web app created with test-driven development, the Google Calendar API, and Amazon Web Services.
 
 ## Project Description
 
